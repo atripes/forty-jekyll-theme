@@ -51,7 +51,7 @@
 				$window
 					.on('scroll._parallax', function() {
 
-						var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
+						var pos = parseInt($window.scrollTop()) - (parseInt($t.position().top - 1500)); // added the 1500 for the specific bg images desert.jpg
 
 						$t.css('background-position', 'center ' + (pos * (-1 * intensity)) + 'px');
 
